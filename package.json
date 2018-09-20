@@ -1,0 +1,29 @@
+{
+  "name": "es6-nodejs-setup",
+  "version": "1.0.0",
+  "description": "Node js services es6 project setup",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack-prod": "webpack --env.NODE_ENV production",
+    "webpack-dev": "webpack --env.NODE_ENV development"
+  },
+  "author": "srinivas kandukuri",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^2.2.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
