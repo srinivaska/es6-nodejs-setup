@@ -8,7 +8,8 @@
     "start": "node ./dist/server.js",
     "lint": "eslint .",
     "lint-fix": "eslint --fix . --ext .js",
-    "test": "mocha --compilers js:babel-core/register --require babel-polyfill --exit"
+    "test": "nyc mocha --compilers js:babel-core/register --require babel-polyfill --exit",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "author": "srinivas kandukuri",
   "license": "MIT",
@@ -22,9 +23,11 @@
     "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "chai-http": "^4.2.0",
+    "codecov": "^3.1.0",
     "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1"
   }
 }
