@@ -1,13 +1,9 @@
-import express from 'express';
-import async, { reject } from 'async';
-
 export default class HelperUtils {
-  constructor() {}
+    constructor() {
+        this.str = 'sample Endpoint Working';
+    }
 
-  reverse(str) {
-    return str
-      .split('')
-      .reverse()
-      .join('');
-  }
+    reverse() {
+        return this.str.split('').reverse().join('');
+    }
 }
