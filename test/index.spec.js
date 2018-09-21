@@ -28,4 +28,16 @@ describe('/GET SAMPLE API TESTS', () => {
                 done();
             });
     });
+
+    it('it should get thirdparty api data', (done) => {
+        chai
+            .request(app)
+            .get('/getApiData')
+            .end((err, res) => {
+                res.should.have.status(200);
+                res.body.should.be.a('object');
+                res.body.should.have.property('reverseString');
+                done();
+            });
+    });
 });

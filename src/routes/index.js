@@ -19,4 +19,14 @@ router.get('/getData', async (req, res) => {
     });
 });
 
+/* Get Data from thirdparty API with async await */
+router.get('/getApiData', async (req, res) => {
+    const response = await Helperservice.getApiData();
+    res.json({
+        data: response,
+        status: 'success',
+        statusCode: 200,
+    });
+});
+
 export default router;
